@@ -1,0 +1,28 @@
+$clralertsuccess:#008000;
+$clralertinfo:#CD5C5C;
+$clralertadvert:#FF8C00;
+$clralertdanger:#FF0000;
+
+.alert{
+  font-family: "Arial";
+  font-size:1.5rem;
+  color:white;
+  width:100%;
+  padding-top:20px;
+  padding-bottom:20px;
+  border-radius:20px;
+  border:2px solid black;
+  text-align: center;
+  &.alert-success{
+    background-color:$clralertsuccess;
+  }
+  &.alert-info{
+    background-color:$clralertinfo;
+  }
+  &.alert-advert{
+    background-color:$clralertadvert;
+  }
+  &.alert-danger{
+    background-color:$clralertdanger;
+  }
+}

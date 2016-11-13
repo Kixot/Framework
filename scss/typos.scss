@@ -1,0 +1,172 @@
+$clrtitle: #8B0000;
+$clrsmall: #404040;
+$maxwidth:480px;
+$sizetitle: 1rem;
+$sizetitlemedia: 1.2rem;
+$sizetextmedia:1.6rem;
+
+body{
+  font-family:"Arial";
+  h1, h2, h3, h4, h5, h6 {
+    color:$clrtitle;
+    padding:10px;
+  }
+  h1{
+    font-size:$sizetitle*2.5;
+    font-weight:bold;
+    text-decoration: underline;
+    margin-bottom:5px;
+    @media screen and (max-device-width: $maxwidth){
+      margin-top: 75px;
+      font-size:$sizetitlemedia*2.5;
+    }
+  }
+  h2{
+    font-size:$sizetitle*2;
+    font-weight:bold;
+    @media screen and (max-device-width: $maxwidth){
+      font-size:$sizetitlemedia*2;
+    }
+  }
+  h3{
+    font-size:$sizetitle*1.7;
+    @media screen and (max-device-width: $maxwidth){
+      font-size:$sizetitlemedia*1.7;
+    }
+  }
+  h4{
+    font-size:$sizetitle*1.5;
+    @media screen and (max-device-width: $maxwidth){
+      font-size:$sizetitlemedia*1.5;
+    }
+  }
+  h5{
+    font-size:$sizetitle*1.2;
+    @media screen and (max-device-width: $maxwidth){
+      font-size:$sizetitlemedia*1.2;
+    }
+  }
+  h6{
+    font-size: $sizetitle;
+    @media screen and (max-device-width: $maxwidth){
+      font-size:$sizetitlemedia;
+    }
+  }
+
+  small, .small{
+    color:$clrsmall;
+    font-size:60%;
+    text-decoration:inherit;
+  }
+
+  p{
+    margin-bottom:15px;
+  }
+
+  mark{
+    background-color: $clrtitle;
+    color:white;
+  }
+
+  del{
+    font-weight:bold;
+    /** text-line-through-color: red;*/
+  }
+
+  strong{
+    font-size:$sizetitle*1.1;
+    font-weight: bold;
+    @media screen and (max-device-width: $maxwidth){
+      font-size:$sizetextmedia*1.1;
+    }
+  }
+
+  em, abbr, blockquote{
+    font-style: italic;
+  }
+
+  blockquote::before{
+    content:"\"";
+  }
+
+  blockquote::after{
+    content:"\"";
+  }
+
+  code{
+    font-family:"Courier New";
+    color:white;
+    background-color:darkslategray;
+  }
+
+  ul{
+    list-style-type: circle;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    &.listsquare{
+      list-style-type: square;
+    }
+    &.listnone{
+      list-style-type: none;
+    }
+  }
+
+  .aligngauche{
+    text-align:left;
+  }
+
+  .aligndroite{
+    text-align:right;
+  }
+
+  .aligncentre{
+    text-align:center;
+  }
+
+  .textejustifie{
+    text-align: justify;
+  }
+
+  .textemaj{
+    text-transform: uppercase;
+  }
+
+  .textemin{
+    text-transform: lowercase;
+  }
+
+  table{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .cell{
+    border:1px solid black;
+    padding:15px;
+  }
+
+  .entete{
+    background-color:$clrtitle;
+    color:white;
+    font-size:1.1rem;
+    padding:5px;
+  }
+
+  .ligne1{
+    background-color: lightpink;
+  }
+
+  .ligne2{
+    background-color: indianred;
+  }
+
+  .ligne1:hover, .ligne2:hover{
+    background-color: white;
+  }
+
+  @media screen and (max-device-width: $maxwidth){
+    font-size:1.6rem;
+  }
+}

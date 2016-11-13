@@ -1,0 +1,75 @@
+$clrbtn1:#CD5C5C;
+$clrbtn2:#8B0000;
+$clrbtnblack1:#FFFFFF;
+$clrbtnblack2:#696969;
+$clrbtnblue1:#FFFFFF;
+$clrbtnblue2:#1E90FF;
+
+$sizetxtbtn:1rem;
+$sizetxtbtn-media:1.3rem;
+
+$maxwidth:480px;
+
+.btn{
+  background-image:repeating-linear-gradient($clrbtn1, $clrbtn2);
+  border:1px solid black;
+  color:white;
+  border-radius:5px;
+  text-decoration: none;
+  font-size:$sizetxtbtn;
+  padding:5px 10px 5px 10px;
+  margin-top:5px;
+  margin-bottom:5px;
+  &:hover{
+    background-image:repeating-linear-gradient($clrbtn2, $clrbtn1);
+    cursor:pointer;
+  }
+  @media screen and(max-device-width: $maxwidth){
+    font-size:$sizetxtbtn-media;
+  }
+}
+
+.btn-sm{
+  font-size:$sizetxtbtn*0.6;
+  @media screen and(max-device-width: $maxwidth){
+    font-size:$sizetxtbtn-media*0.6;
+  }
+}
+
+.btn-lg{
+  font-size:$sizetxtbtn*1.6;
+  @media screen and(max-device-width: $maxwidth){
+    font-size:$sizetxtbtn-media*1.6;
+  }
+}
+
+.btn-elg{
+  width:100%;
+  font-size:$sizetxtbtn*2;
+  @media screen and(max-device-width: $maxwidth){
+    font-size:$sizetxtbtn-media*2;
+  }
+}
+
+.btn-black{
+  background-image:repeating-linear-gradient($clrbtnblack1, $clrbtnblack2);
+  color:black;
+  &:hover{
+    background-image:repeating-linear-gradient($clrbtnblack2, $clrbtnblack1);
+  }
+}
+
+.btn-blue{
+  background-image:repeating-linear-gradient($clrbtnblue1, $clrbtnblue2);
+  color:black;
+  &:hover{
+    background-image:repeating-linear-gradient($clrbtnblue2, $clrbtnblue1);
+  }
+}
+
+.btn-fancy{
+  background-image:linear-gradient(blue, red);
+  &:hover{
+    background-image:linear-gradient(red, blue);
+  }
+}

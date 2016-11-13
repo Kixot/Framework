@@ -1,0 +1,226 @@
+$clrheader:#A31818 !default;
+$clrnav:#7B0000;
+$txtsize:1rem;
+$maxwidth:480px;
+
+header{
+  background-color:$clrheader;
+  height:100px;
+  margin-top:15px;
+  border-top:1px solid gray;
+  border-bottom:1px solid gray;
+  margin-bottom:10px;
+  display:flex;
+  @media screen and (max-device-width: $maxwidth){
+    display: block;
+    margin:0;
+    text-align:center;
+    border:0px;
+  }
+}
+
+.title{
+  font-family: "Arial";
+  color:white;
+  font-size:4rem;
+  margin-top:30px;
+  margin-left:40px;
+  @media screen and (max-device-width: $maxwidth){
+    font-size: 2rem;
+  }
+}
+
+.subtitle{
+  font-family: "Arial";
+  width:100%;
+  margin-top:auto;
+  margin-bottom:auto;
+  font-size:1.3rem;
+  margin-right:40px;
+  > div{
+    display:inline-block;
+    margin-left:40px;
+    > a{
+      color:black;
+    }
+  }
+  @media screen and (max-device-width: $maxwidth){
+    font-size:2rem;
+    > div{
+      float:none;
+      display: block;
+      background-color:$clrheader;
+      margin:0;
+      border-top:1px solid lighten($clrheader, 20%);
+      height:50px;
+    }
+  }
+}
+
+.jumbotron{
+  text-align:center;
+  background-color:navajowhite;
+  border:1px solid gray;
+  margin-left:30px;
+  margin-right:30px;
+  margin-bottom:20px;
+  > .radiogroup > p{
+    display:block;
+    text-align: left;
+  }
+}
+
+.navbar{
+  list-style:none;
+  display:flex;
+  width:95%;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color:$clrnav;
+  > li {
+    box-sizing: border-box;
+    padding-top:10px;
+    padding-bottom:10px;
+    width:100%;
+    text-align:center;
+    color:white;
+    &:hover{
+      background-color:lighten($clrnav, 12);
+      box-shadow:inset 3px 0px 0px 0px lighten($clrnav, 35);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .disabled{
+    background-color:darken($clrnav, 10);
+    color:grey;
+    text-decoration: line-through;
+    &:hover{
+      background-color: darken($clrnav, 10);
+      text-decoration: line-through;
+      cursor:default;
+      box-shadow:none;
+    }
+  }
+}
+
+.active{
+  font-size:1.1*$txtsize;
+  background-color:lighten($clrnav, 7);
+  box-shadow:inset 0px 3px 3px 0px lighten($clrnav, 39);
+}
+
+
+.breadcrumb{
+  list-style:none;
+  overflow:hidden;
+  li{
+    float:left;
+    a{
+      color:white;
+      text-decoration: none;
+      padding: 10px 0 10px 65px;
+      background-color:$clrheader;
+      position:relative;
+      display:block;
+      float: left;
+      &:after{
+        width:0;
+        height:0;
+        content: " ";
+        display: block;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid $clrheader;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 100%;
+        z-index: 2;
+      }
+      &:before{
+        width:0;
+        height:0;
+        content: " ";
+        display: block;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid white;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        margin-left: 1px;
+        left: 100%;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.pagination{
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  li{
+    display: inline;
+    a{
+      border: 1px solid #ddd;
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      .active{
+        background-color: #4CAF50;
+        color: white;
+      }
+    }
+  }
+}
+
+.flotterdroite{
+  float:right;
+}
+
+.flottergauche{
+  float:left;
+}
+
+.radiogroup{
+  margin-left:20px;
+  font-size:$txtsize*1.2;
+  >p{
+    margin-left:50px;
+    display:inline-block;
+  }
+  @media screen and(max-device-width: $maxwidth){
+    font-size:$txtsize*2;
+    > p{
+      display:block;
+      margin:0;
+    }
+  }
+}
+
+.img{
+  >img{
+    width:30%;
+  }
+  margin-left:50px;
+  >h1{
+    display: inline-block;
+  }
+  @media screen and (max-device-width: $maxwidth){
+    text-align: center;
+    margin-left:0;
+    margin-top:100px;
+    >img{
+      width:40%;
+    }
+    >h1{
+      display:block;
+    }
+  }
+}
+
